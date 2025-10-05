@@ -1,6 +1,7 @@
-name: "ShellCheck - GitHub Action"
+name: shellcheck action
 author: "Ananta Cloud <github@anantacloud.com>"
-description: "GitHub action for ShellCheck."
+description: "GitHub action to check shell script linting."
+
 inputs:
   additional_files:
     description: "This input contains a space separated list of additional filename to check"
@@ -38,6 +39,7 @@ inputs:
     description: "This input contains the shellcheck version to install"
     required: false
     default: "stable"
+
 outputs:
   files:
     description: This output contains a list of files with issues
@@ -45,9 +47,11 @@ outputs:
   options:
     description: This output contains the options used
     value: ${{ steps.options.outputs.options }}
+
 branding:
   icon: "terminal"
   color: "blue"
+
 runs:
   using: "composite"
   steps:
