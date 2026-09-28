@@ -12,7 +12,7 @@ jobs:
           exit 1
       - name: step to generate semantic version
         id: tag_version
-        uses: mathieudutour/github-tag-action@v6.2
+        uses: mathieudutour/github-tag-action@v7
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           release_branches: main
